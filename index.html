@@ -11,10 +11,10 @@
     #framely { z-index:100; width:100%; height:100%; position:fixed; }
     #loading { z-index:200; width:100%; height:100%; position:fixed; 
     	background:#ecf4f7; color:#333;
-    	font:bold italic 22pt serif; text-align:center; padding-top:1em; }
+    	font:bold italic 26pt serif; text-align:center; padding-top:15%; }
     .sources a { font:normal 14pt sans-serif; text-decoration:none; color:blue; }
-    .sources img { height:1em; }
-    #loading div { margin-top:1em; }
+    .sources img { height:2em; }
+    #loading div { margin-top:4em; }
     </style>
 	<script src="lib/zepto/zepto.min.js"></script>
 	<script src="lib/zepto/zepto-fx.js"></script>
@@ -29,16 +29,12 @@
   </head>
   <body>
   	<div id="loading">
-  		<span>...</span>
-  		<div class="banner"><img src="img/hny.png" width="60%"></div>
+  		<span></span>
   		<div class="sources">
-  			<a href="https://github.com/loleg/aletsch-rutsch/tree/master/geodata">
-  				<img src="img/opendata_logo2.png">
-  				Geodata
-  			</a>
   			<a href="https://github.com/loleg/aletsch-rutsch">
-  				<img src="img/github-256-black.png">
-  				Source
+  				<img src="img/opendata_logo2.png">
+  				<img src="img/github-256-black.png"><br>
+  				Sources
   			</a>
   		</div>
   	</div>
@@ -63,7 +59,9 @@
 		</a-entity>
 
         <a-curve id="camera-track">
-		    <a-curve-point position="-40 25.6 -21"></a-curve-point>
+		    <a-curve-point position="-40 155.6 -21"></a-curve-point>
+		    <a-curve-point position="-40 55.6 -21"></a-curve-point>
+		    <a-curve-point position="-40 26.6 -21"></a-curve-point>
 		    <a-curve-point position="-31 25 -12"></a-curve-point>
 			<a-curve-point position="-40 21 6.1"></a-curve-point>
 			<a-curve-point position="-25 20 17"></a-curve-point>

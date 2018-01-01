@@ -1,16 +1,24 @@
 Zepto(function($){
 	function closeLoader() {
-		duration = 1000;
-		$('#loading').animate({
-	        opacity: 0
-	    }, duration, "linear");
+		setTimeout(function() {
+			$('#loading').animate({ opacity: 0 }, 1000*3, "ease-out");
+		}, 1000);
+		$('#loading .sources').animate({ opacity: 0 }, 1000, "linear");
 	}
 	$('#loading').click(closeLoader);
-	setTimeout(closeLoader, 1000*8);
+	setTimeout(closeLoader, 1000*6);
 
 	var randhaiku = haiku[Math.round(Math.random() * (haiku.length-1))];
-	randhaiku = randhaiku.replace(/\n/g, '<br>');
-	$('#loading span').html(randhaiku);
+	randhaiku = randhaiku.replace(/\n/g, '<br> ');
+	var spanhaiku = $('#loading span');
+	var haikucount = 0;
+	$.each(randhaiku.split(' '), function() {
+		spanhaiku.append('<b style="opacity:0">' + this + '</b> ');
+		spanhaiku.find('b:last-child').animate({
+			opacity: 1
+		}, 1000 * haikucount, 'ease-out');
+		haikucount += this.length;
+	});
 
 	var balls = [
 		document.querySelector('#red-ball'),
@@ -23,7 +31,7 @@ Zepto(function($){
 	var climatedata = null;
 	asyncCsv2Array("data/climate.csv", ",", function(csvdata) {
 	    climatedata = csvdata;
-	    console.info(climatedata.length, "rows loaded");
+	    console.info(climatedata.length, "climate data rows loaded");
 
 		var datarange = [];
 		for (var jb=0; jb<balls.length; jb++) {
