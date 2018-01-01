@@ -1,0 +1,15 @@
+ENVI
+description = {
+C:/Localdev/VR/aframe/_projects/aletsch2020/data/aletschgletsch-300.bin}
+samples = 300
+lines   = 300
+bands   = 1
+header offset = 0
+file type = ENVI Standard
+data type = 12
+interleave = bsq
+byte order = 0
+map info = {Geographic Lat/Lon, 1, 1, 7.85819444444444, 46.7554166666667, 0.00159537037037037, 0.00159537037037037,WGS-84}
+coordinate system string = {GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]]}
+band names = {
+Band 1}
