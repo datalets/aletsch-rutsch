@@ -34,7 +34,7 @@ Additionally, [Zepto.js](http://zeptojs.com/) is used for loader code.
 
 A description of how the terrain model was prepared can be found in the [geodata README](geodata/README.md).
 
-Note that it was initially attempted to use a physics engine to simulate the rolling of the spheres down the glacier. However, the complexity of the model as well as lack of time was a constraint. Therefore the balls are rolling along fixed tracks, which were hand-palced using the A-Frame inspector:
+Note that it was initially attempted to use a [physics system](https://github.com/donmccurdy/aframe-physics-system) to simulate the rolling of the spheres down the glacier. However, the complexity of the model as well as lack of time was a constraint. Therefore the balls are rolling along fixed tracks, which were hand-placed using the A-Frame inspector:
 
 ![screenshot](img/_screenshot.jpg)
 
