@@ -10,7 +10,7 @@ This is a visualisation of the [Aletsch Glacier](https://en.wikipedia.org/wiki/A
 
 Additionally, [Zepto.js](http://zeptojs.com/) is used for loader code.
 
-A description of how the dataset was prepared can be found in the [data README](data/README.md).
+A description of how the terrain model was prepared can be found in the [geodata README](geodata/README.md).
 
 # FAQ
 
