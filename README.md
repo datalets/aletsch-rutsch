@@ -5,7 +5,7 @@ This is a visualisation of the [Aletsch Glacier](https://en.wikipedia.org/wiki/A
 
 > Aletsch Glacier retreated 2.8 km (1.7 mi) from 1880 to 2009. This rate of retreat has also increased since 1980, with 30%, or 800 m (2,600 ft), of the total retreat occurring in the last 20% of the time period.
 
-The colored "snowballs" seen in this dataviz are changing shape according to three climate indicators for the time period 2011-2017:
+The colored "snowballs" seen in this dataviz are increasing in weight according to real data: three climate indicators for the time period 2011-2017:
 
 - <font color="red">**RED**</font>: Area-mean temperatures of northern Switzerland > 1000 m
 - <font color="green">**GREEN**</font>: Cumulative precipitation (mm or litres/m2) 
@@ -23,7 +23,7 @@ This project was further inspired by [Glacier changing in time](https://www.scho
 
 #### Technical info
 
-The terrain seen here is a representation of the actual alpine region, rendered as a 3D model using [A-Frame](https://github.com/aframevr/aframe/) and several A-Frame components: 
+The terrain seen here is a representation of the actual alpine region, rendered as a 3D model using the Virtual Reality library [A-Frame](https://github.com/aframevr/aframe/) and several A-Frame components: 
 
 - [alongpath](https://github.com/protyze/aframe-alongpath-component)
 - [curve](https://github.com/protyze/aframe-curve-component)
