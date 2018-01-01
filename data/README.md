@@ -33,3 +33,8 @@ Open use. Must provide the source. Use for commercial purposes requires permissi
 The Agroscope data has unclear conditions, since the link in the footer goes to the [standard legal terms](https://www.admin.ch/gov/de/start/rechtliches.html) of Swiss government websites.
 
 Therefore this dataset cannot be republished under an open license at time of writing, and is shared here for purposes of demonstration only.
+
+Haiku data
+==========
+
+The file `haiku.js` was created using haikus generated with [PoetRNN.jl](https://github.com/loleg/PoetRNN.jl) using as input a haikus dataset collected by Sam Ballas for the original [PoetRNN](https://github.com/sballas8/PoetRNN/tree/master/data).
