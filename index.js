@@ -21,7 +21,7 @@ Zepto(function($){
 
 	var counter = 0;
 	var climatedata = null;
-	asyncCsv2Array("climate.csv", ",", function(csvdata) {
+	asyncCsv2Array("data/climate.csv", ",", function(csvdata) {
 	    climatedata = csvdata;
 	    console.info(climatedata.length, "rows loaded");
 
@@ -30,6 +30,7 @@ Zepto(function($){
 			if (datamult.length <= jb) datamult.push(null);
 			if (datarange.length <= jb) datarange.push([null, null]);
 			for (var i=1; i<climatedata.length; i++) {
+				//console.log(climatedata[i][jb+1]);
 				v = climatedata[i][jb+1] = parseFloat(climatedata[i][jb+1]);
 				if (!isNaN(v)) {
 					if (datarange[jb][0] == null || v < datarange[jb][0]) 
@@ -40,21 +41,24 @@ Zepto(function($){
 				}
 			}
 		}
-		//console.log(datamult);
+		//console.log(datamult, datarange);
 
 		boing = setInterval(function() {
 			for (var jb=0; jb<balls.length; jb++) {
 				curtemp = climatedata[counter+1][jb+1];
+				//console.log(jb, counter, curtemp);
 				if (!isNaN(curtemp)) {
-					radius = (0.1 / datamult[jb]) * (curtemp - datarange[jb][0]);
+					radius = (0.01 / datamult[jb]) * (curtemp - datarange[jb][0]);
 					radius = parseFloat(balls[jb].getAttribute('radius')) + radius;
-					if (radius < 5.0)
+					if (radius < 5.0) {
 						balls[jb].setAttribute('radius', radius);
-					//console.log(jb, counter, curtemp, radius);
-					counter = (counter >= climatedata.length-2) ? 0 : counter + 1;
+						balls[jb].emit('blink');
+						//console.log(radius);
+					}
 				}
 			}
-		}, 200);
+			counter = (counter >= climatedata.length-2) ? 0 : counter + 1;
+		}, 300);
 
 	});
 
