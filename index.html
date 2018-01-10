@@ -9,7 +9,7 @@
     <meta name="description" content="Swiss glacier visualised in 3D with A-Frame">
     <style type="text/css">
     #framely { z-index:100; width:100%; height:100%; position:fixed; }
-    #loading { z-index:200; width:100%; height:100%; position:fixed; 
+    #loading { z-index:200; width:100%; height:100%; position:fixed;
     	background:#ecf4f7; color:#333;
     	font:bold italic 26pt serif; text-align:center; padding-top:15%; }
     .sources a { font:normal 14pt sans-serif; text-decoration:none; color:blue; }
@@ -31,11 +31,14 @@
   	<div id="loading">
   		<span></span>
   		<div class="sources">
-  			<a href="https://github.com/loleg/aletsch-rutsch">
-  				<img src="img/opendata_logo2.png">
-  				<img src="img/github-256-black.png"><br>
-  				Sources
-  			</a>
+				<p><small><em>Too busy? Try the</em>
+					<br>.: <a href="relax.html"><b>Relax</b> edition</a> :.</small>
+				</p>
+	  			<a href="https://github.com/loleg/aletsch-rutsch">
+	  				<img src="img/opendata_logo2.png">
+	  				<img src="img/github-256-black.png"><br>
+	  				Sources
+	  			</a>
   		</div>
   	</div>
   	<img id="framely" src="img/frame.png">
@@ -45,7 +48,7 @@
     	<!-- Fog does not work, conflicts with particle shader component
     	     see: https://github.com/IdeaSpaceVR/aframe-particle-system-component/issues/26
     	fog="type: linear; color: #ecf4f7; far: 100">-->
-      	
+
       	<a-entity position="-25 25 17" particle-system="preset: snow; particleCount: 8000"></a-entity>
 
 		<a-entity id="g-terrain" terrain-model='zPosition: 80;
@@ -73,7 +76,7 @@
 
 <!--			position="-20 35 55"-->
 		<a-entity camera id="g-camera"
-			position="-43 26 -23" 
+			position="-43 26 -23"
 			alongpath="curve: #camera-track; dur: 30000"
 			universal-controls wasd-controls look-controls
 			rotation="-2 225 0"
@@ -95,8 +98,8 @@
 			<a-curve-point position="-55 15 82"></a-curve-point>
 			<a-curve-point position="-55 0 82"></a-curve-point>
 		</a-curve>
-		<a-sphere id="green-ball" 
-			alongpath="curve: #green-track; dur: 10000; loop: true" 
+		<a-sphere id="green-ball"
+			alongpath="curve: #green-track; dur: 10000; loop: true"
 			position="-40 25.6 -21" color="white" radius="1.0" opacity="0.43">
 			<a-animation attribute="material.color" from="green" to="white" begin="blink" dur="555"></a-animation>
 		</a-sphere>
@@ -116,8 +119,8 @@
 			<a-curve-point position="-55 15 82"></a-curve-point>
 			<a-curve-point position="-55 0 82"></a-curve-point>
 		</a-curve>
-		<a-sphere id="yellow-ball" 
-			alongpath="curve: #yellow-track; dur: 9000; loop: true" 
+		<a-sphere id="yellow-ball"
+			alongpath="curve: #yellow-track; dur: 9000; loop: true"
 			position="-40 25.6 -21" color="white" radius="1.0" opacity="0.43">
 			<a-animation attribute="material.color" from="yellow" to="white" begin="blink" dur="555"></a-animation>
 		</a-sphere>
@@ -137,8 +140,8 @@
 			<a-curve-point position="-55 15 82"></a-curve-point>
 			<a-curve-point position="-55 0 82"></a-curve-point>
 		</a-curve>
-		<a-sphere id="red-ball" 
-			alongpath="curve: #red-track; dur: 8000; loop: true" 
+		<a-sphere id="red-ball"
+			alongpath="curve: #red-track; dur: 8000; loop: true"
 			position="-40 25.6 -21" color="white" radius="1.0" opacity="0.43">
 			<a-animation attribute="material.color" from="red" to="white" begin="blink" dur="555"></a-animation>
 		</a-sphere>
